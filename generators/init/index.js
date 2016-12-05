@@ -38,11 +38,7 @@ module.exports = yeoman.Base.extend({
      }];
 
    return this.prompt(prompts).then(props => {
-     this.props.appPackage = props.package;
-     this.appName = props.name;
-     this.appPackage = props.package;
-     this.androidTargetSdkVersion = props.targetSdk;
-     this.androidMinSdkVersion = props.minSdk;
+     th.config.set("appPackage", props.package);
    });
   }
 });

@@ -19,7 +19,7 @@ public class <%= activityName %> extends ActivityBase<<%= activityName %>Binding
     }
 
     @Override
-    public ActivityHomeVM baseActivityVM(ActivityHomeBinding binding, Bundle savedInstanceState) {
-        return new ActivityTemplateVM(this, binding);
+    public <%= activityName %>VM baseActivityVM(<%= activityName %>Binding binding, Bundle savedInstanceState) {
+        return new <%= activityName %>VM(this, binding);
     }
 }
