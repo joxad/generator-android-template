@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="<%= activityBR %>VM"
-            type="<%= appPackage %>.<%= packageName %>.<%= fragmentName %>VM" />
+            name="<%= BR %>VM"
+            type="<%= appPackage %>.<%= packageName %>.<%= name %>VM" />
     </data>
 
     <LinearLayout

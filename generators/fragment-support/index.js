@@ -19,7 +19,7 @@ module.exports = yeoman.Base.extend({
       default: this.applicationId
     },{
       name: 'packageName',
-      message: 'In which package do you want to put this activity?',
+      message: 'In which package do you want to put this fragment?',
       store: true,
       default: this.packageName,
       validate: function(input) {
@@ -30,7 +30,7 @@ module.exports = yeoman.Base.extend({
       }
     }, {
       name: 'layoutXml',
-      message: 'What are you calling your activity xml (example : activity_home)? DONT WRITE .xml',
+      message: 'What are you calling your activity xml (example : fragment_home)? DONT WRITE .xml',
       store: true,
       default: this.layoutXml,
       validate: function(input) {
@@ -55,20 +55,20 @@ module.exports = yeoman.Base.extend({
       xmlSplit[i] = xmlSplit[i].charAt(0).toUpperCase() + xmlSplit[i].substring(1);
     }
     var name = xmlSplit.join('');
-    var activityBR = name.charAt(0).toLowerCase()+ name.substring(1);
+    var BR = name.charAt(0).toLowerCase()+ name.substring(1);
     this.fs.copyTpl(
-      this.templatePath('TemplateActivity.java'),
+      this.templatePath('TemplateFragment.java'),
       this.destinationPath('app/src/main/java/'+fullPackage + "/" + packageName + '/' + name+'.java'), {
         appPackage: fullPackage,
         packageName : packageName,
         name: name,
         layoutName : layoutXml,
-        activityBR : activityBR
+        BR : BR
       }
     );
 
     this.fs.copyTpl(
-      this.templatePath('TemplateActivityVM.java'),
+      this.templatePath('TemplateFragmentVM.java'),
       this.destinationPath('app/src/main/java/'+fullPackage + "/" + packageName + '/' + name+'VM.java'), {
         appPackage: fullPackage,
         packageName : packageName,
@@ -76,12 +76,12 @@ module.exports = yeoman.Base.extend({
       }
     );
     this.fs.copyTpl(
-      this.templatePath('template_activity.xml'),
+      this.templatePath('template_fragment.xml'),
       this.destinationPath('app/src/main/res/layout/'+layoutXml + '.xml'), {
         appPackage: fullPackage,
-        packageName : packageName,
+        packageName: packageName,
         name: name,
-        activityBR : activityBR
+        BR : BR
       }
     );
   }

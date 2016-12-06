@@ -1,7 +1,7 @@
 {
   "name": "generator-android-template",
-  "version": "0.0.0",
-  "description": "Create a new app from scratch and add components to it",
+  "version": "0.6.0",
+  "description": "Add android components in databinding way into your project",
   "homepage": "https://github.com/joxad/generator-android-template",
   "author": {
     "name": "Jocelyn David",
@@ -42,6 +42,15 @@
       "mocha": true
     }
   },
+  "keywords": [
+    "yeoman-generator",
+    "android",
+    "mvvm",
+    "databinding",
+    "generator",
+    "generator-android-template",
+    "boilerplate"
+  ],
   "repository": "joxad/generator-android-template",
   "scripts": {
     "prepublish": "gulp prepublish",

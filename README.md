@@ -16,6 +16,29 @@ Then generate your new project:
 yo android-template
 ```
 
+
+## Generate an activity
+
+
+```bash
+yo android-template:activity
+```
+
+## Generate a fragment
+
+
+```bash
+yo android-template:fragment
+```
+
+## Generate a support fragment
+
+
+```bash
+yo android-template:fragment-support
+```
+
+
 ## Getting To Know Yeoman
 
  * Yeoman has a heart of gold.
