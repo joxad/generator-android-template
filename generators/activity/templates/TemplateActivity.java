@@ -10,12 +10,12 @@ import <%= appPackage %>.BR;
 public class <%= activityName %> extends ActivityBase<<%= activityName %>Binding, <%= activityName %>VM> {
     @Override
     public int data() {
-        return BR.templateActivityVM;
+        return BR.<%= activityBR %>;
     }
 
     @Override
     public int layoutResources() {
-        return R.layout.template_activity;
+        return R.layout.<%= layoutName %>;
     }
 
     @Override
