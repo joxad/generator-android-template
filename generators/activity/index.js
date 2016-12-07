@@ -21,13 +21,7 @@ module.exports = yeoman.Base.extend({
       name: 'packageName',
       message: 'In which package do you want to put this activity?',
       store: true,
-      default: this.packageName,
-      validate: function(input) {
-        if (/^([a-zA-Z0-9_]*)$/.test(input)) {
-          return true;
-        }
-        return 'Your application name cannot contain special characters or a blank space, using the default name instead : ' + this.appname;
-      }
+      default: this.packageName
     }, {
       name: 'layoutXml',
       message: 'What are you calling your activity xml (example : activity_home)? DONT WRITE .xml',
@@ -48,8 +42,12 @@ module.exports = yeoman.Base.extend({
   },
   writing: function() {
     var fullPackage = this.props.applicationId;
+    var fullPackageFolder = this.props.applicationId.split('.').join('/');
+
     var xmlSplit = this.props.layoutXml.toLowerCase().split("_");
     var packageName = this.props.packageName;
+    var packageNameFolder = this.props.packageName.split('.').join('/');
+
     var layoutXml = this.props.layoutXml.toLowerCase();
     for (var i = 0; i < xmlSplit.length; i++) {
       xmlSplit[i] = xmlSplit[i].charAt(0).toUpperCase() + xmlSplit[i].substring(1);
@@ -58,18 +56,18 @@ module.exports = yeoman.Base.extend({
     var activityBR = name.charAt(0).toLowerCase()+ name.substring(1);
     this.fs.copyTpl(
       this.templatePath('TemplateActivity.java'),
-      this.destinationPath('app/src/main/java/'+fullPackage + "/" + packageName + '/' + name+'.java'), {
+      this.destinationPath('app/src/main/java/'+fullPackageFolder + "/" + packageNameFolder + '/' + name+'.java'), {
         appPackage: fullPackage,
         packageName : packageName,
         name: name,
         layoutName : layoutXml,
-        activityBR : activityBR
+        BR : BR
       }
     );
 
     this.fs.copyTpl(
       this.templatePath('TemplateActivityVM.java'),
-      this.destinationPath('app/src/main/java/'+fullPackage + "/" + packageName + '/' + name+'VM.java'), {
+      this.destinationPath('app/src/main/java/'+fullPackageFolder + "/" + packageNameFolder + '/' + name+'VM.java'), {
         appPackage: fullPackage,
         packageName : packageName,
         name: name
@@ -81,7 +79,7 @@ module.exports = yeoman.Base.extend({
         appPackage: fullPackage,
         packageName : packageName,
         name: name,
-        activityBR : activityBR
+        BR : BR
       }
     );
   }

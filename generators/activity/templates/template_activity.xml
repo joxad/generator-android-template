@@ -5,15 +5,18 @@
     <data>
 
         <variable
-            name="<%= activityBR %>VM"
-            type="<%= appPackage %>.<%= packageName %>.<%= fragmentName %>VM" />
+            name="<%= BR %>VM"
+            type="<%= appPackage %>.<%= packageName %>.<%= name %>VM" />
     </data>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:text="<%= BR %>"/>
     </LinearLayout>
 
 

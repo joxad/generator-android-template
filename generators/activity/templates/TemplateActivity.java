@@ -3,7 +3,6 @@ package <%= appPackage %>;
 import com.joxad.easydatabinding.activity.ActivityBase;
 import <%= appPackage %>.R;
 import <%= appPackage %>.BR;
-import <%= appPackage %>.<%= packageName %>.<%= name %>VM;
 import <%= appPackage %>.databinding.<%= name %>Binding;
 
 /**
