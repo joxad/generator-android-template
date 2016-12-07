@@ -1,0 +1,141 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/Jocelyn/Documents/Android/generator-android-template',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/Jocelyn/.npm/generator-android-template/0.6.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/Jocelyn/.npm correctMkdir not in flight; initializing
+10 info lifecycle generator-android-template@0.6.0~prepublish: generator-android-template@0.6.0
+11 verbose lifecycle generator-android-template@0.6.0~prepublish: unsafe-perm in lifecycle true
+12 verbose lifecycle generator-android-template@0.6.0~prepublish: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/Jocelyn/Documents/Android/generator-android-template/node_modules/.bin:/Users/Jocelyn/.fastlane/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/Jocelyn/Library/Android/sdk/platform-tools:/Users/Jocelyn/Library/Android/sdk/tools:/Users/Jocelyn/.fastlane/bin
+13 verbose lifecycle generator-android-template@0.6.0~prepublish: CWD: /Users/Jocelyn/Documents/Android/generator-android-template
+14 silly lifecycle generator-android-template@0.6.0~prepublish: Args: [ '-c', 'gulp prepublish' ]
+15 silly lifecycle generator-android-template@0.6.0~prepublish: Returned: code: 0  signal: null
+16 verbose tar pack [ '/Users/Jocelyn/.npm/generator-android-template/0.6.0/package.tgz',
+16 verbose tar pack   '/Users/Jocelyn/Documents/Android/generator-android-template' ]
+17 verbose tarball /Users/Jocelyn/.npm/generator-android-template/0.6.0/package.tgz
+18 verbose folder /Users/Jocelyn/Documents/Android/generator-android-template
+19 verbose addLocalTarball adding from inside cache /Users/Jocelyn/.npm/generator-android-template/0.6.0/package.tgz
+20 verbose correctMkdir /Users/Jocelyn/.npm correctMkdir not in flight; initializing
+21 silly cache afterAdd generator-android-template@0.6.0
+22 verbose afterAdd /Users/Jocelyn/.npm/generator-android-template/0.6.0/package/package.json not in flight; writing
+23 verbose correctMkdir /Users/Jocelyn/.npm correctMkdir not in flight; initializing
+24 verbose afterAdd /Users/Jocelyn/.npm/generator-android-template/0.6.0/package/package.json written
+25 silly publish { name: 'generator-android-template',
+25 silly publish   version: '0.6.0',
+25 silly publish   description: 'Add android components in databinding way into your project',
+25 silly publish   homepage: 'https://github.com/joxad/generator-android-template',
+25 silly publish   author:
+25 silly publish    { name: 'Jocelyn David',
+25 silly publish      email: 'jox.david@gmail.com',
+25 silly publish      url: 'https://github.com/joxad/' },
+25 silly publish   files: [ 'generators' ],
+25 silly publish   main: 'generators/index.js',
+25 silly publish   keywords:
+25 silly publish    [ 'yeoman-generator',
+25 silly publish      'android',
+25 silly publish      'mvvm',
+25 silly publish      'databinding',
+25 silly publish      'generator',
+25 silly publish      'generator-android-template',
+25 silly publish      'boilerplate' ],
+25 silly publish   dependencies:
+25 silly publish    { 'yeoman-generator': '^0.23.0',
+25 silly publish      chalk: '^1.0.0',
+25 silly publish      yosay: '^1.0.0' },
+25 silly publish   devDependencies:
+25 silly publish    { 'yeoman-test': '^1.0.0',
+25 silly publish      'yeoman-assert': '^2.0.0',
+25 silly publish      eslint: '^3.1.1',
+25 silly publish      'eslint-config-xo-space': '^0.15.0',
+25 silly publish      gulp: '^3.9.0',
+25 silly publish      'gulp-eslint': '^3.0.1',
+25 silly publish      'gulp-exclude-gitignore': '^1.0.0',
+25 silly publish      'gulp-line-ending-corrector': '^1.0.1',
+25 silly publish      'gulp-istanbul': '^1.0.0',
+25 silly publish      'gulp-mocha': '^3.0.1',
+25 silly publish      'gulp-plumber': '^1.0.0',
+25 silly publish      'gulp-nsp': '^2.1.0',
+25 silly publish      'gulp-coveralls': '^0.1.0' },
+25 silly publish   eslintConfig: { extends: 'xo-space', env: { mocha: true } },
+25 silly publish   repository:
+25 silly publish    { type: 'git',
+25 silly publish      url: 'git+https://github.com/joxad/generator-android-template.git' },
+25 silly publish   scripts: { prepublish: 'gulp prepublish', test: 'gulp' },
+25 silly publish   license: 'MIT',
+25 silly publish   readme: '# generator-android-template [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]\n> Create a new app from scratch and add components to it\n\n\n# Version : 0.7.0\n\nThis project was created in order to generate the different classes used by my other library (https://github.com/joxad/easydatabinding)  using yeoman generator :\n\n\nIn order to make databinding working, we need to create\n- a xml layout with <layout> <data></data> ... </layout>\n- a activity/fragment class\n- a vm associated to this activity/fragment\n\nThe generator is here to help developers do it faster :)\n\n\n\n## Installation\n\nFirst, install [Yeoman](http://yeoman.io) and generator-android-template using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).\n\n```bash\nnpm install -g yo\nnpm install -g generator-android-template\n```\n\nThen generate your new project:\n\nYou will have to call the command line below IN THE ROOT of your project.\n\n## How does it work\n\nYou will be ask a few questions in order to generate the needed classes :\n- applicationId => in order to know where to place the generated code\n- packageName => the package where you want to put the activty/fragment java classes\n- layout name => it will generate the xml & activity/fragment & activityVM/fragmentVM  \n\n## Generate an activity\n\n\n```bash\nyo android-template:activity\n```\n\n## Generate a fragment\n\n\n```bash\nyo android-template:fragment\n```\n\n## Generate a support fragment\n\n\n```bash\nyo android-template:fragment-support\n```\n\n\n## Getting To Know Yeoman\n\n * Yeoman has a heart of gold.\n * Yeoman is a person with feelings and opinions, but is very easy to work with.\n * Yeoman can be too opinionated at times but is easily convinced not to be.\n * Feel free to [learn more about Yeoman](http://yeoman.io/).\n\n## License\n\nMIT © [Jocelyn David](https://github.com/joxad/)\n\n\n[npm-image]: https://badge.fury.io/js/generator-android-template.svg\n[npm-url]: https://npmjs.org/package/generator-android-template\n[travis-image]: https://travis-ci.org/joxad/generator-android-template.svg?branch=master\n[travis-url]: https://travis-ci.org/joxad/generator-android-template\n[daviddm-image]: https://david-dm.org/joxad/generator-android-template.svg?theme=shields.io\n[daviddm-url]: https://david-dm.org/joxad/generator-android-template\n[coveralls-image]: https://coveralls.io/repos/joxad/generator-android-template/badge.svg\n[coveralls-url]: https://coveralls.io/r/joxad/generator-android-template\n',
+25 silly publish   readmeFilename: 'README.md',
+25 silly publish   gitHead: 'b8115d75f8315199d3c91cc0b39d4a96f8d2b95c',
+25 silly publish   bugs: { url: 'https://github.com/joxad/generator-android-template/issues' },
+25 silly publish   _id: 'generator-android-template@0.6.0',
+25 silly publish   _shasum: '86009a41eaa1b12962491befefa5084d49fd3992',
+25 silly publish   _from: '.' }
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name generator-android-template
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'generator-android-template',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'generator-android-template',
+30 silly mapToRegistry   name: 'generator-android-template',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/generator-android-template
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/Jocelyn/.npm/generator-android-template/0.6.0/package.tgz
+34 verbose request uri https://registry.npmjs.org/generator-android-template
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 9:52:36 AM
+37 verbose request using bearer token for auth
+38 verbose request id ef9be8cef6f980e3
+39 http request PUT https://registry.npmjs.org/generator-android-template
+40 http 403 https://registry.npmjs.org/generator-android-template
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '95',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Wed, 07 Dec 2016 08:52:37 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-cdg8722-CDG',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1481100756.077890,VS0,VE1340',
+41 verbose headers   vary: 'Accept-Encoding' }
+42 verbose request invalidating /Users/Jocelyn/.npm/registry.npmjs.org/generator-android-template on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: "You cannot publish over the previously published version 0.6.0." : generator-android-template
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1044:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:965:12)
+45 verbose statusCode 403
+46 verbose pkgid generator-android-template
+47 verbose cwd /Users/Jocelyn/Documents/Android/generator-android-template
+48 error Darwin 16.1.0
+49 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+50 error node v6.9.1
+51 error npm  v3.10.8
+52 error code E403
+53 error "You cannot publish over the previously published version 0.6.0." : generator-android-template
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
