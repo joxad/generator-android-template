@@ -2,7 +2,7 @@
 > Create a new app from scratch and add components to it
 
 
-# Version : 0.8.0
+# Version : 0.8.1
 
 This project was created in order to generate the different classes used by my other library (https://github.com/joxad/easydatabinding)  using yeoman generator :
 

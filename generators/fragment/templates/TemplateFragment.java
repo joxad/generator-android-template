@@ -1,4 +1,4 @@
-package <%= appPackage %>;
+package <%= appPackage %>.<%= packageName %>;
 
 import com.joxad.easydatabinding.fragment.FragmentBase;
 import <%= appPackage %>.R;
