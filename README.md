@@ -1,6 +1,21 @@
 # generator-android-template [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Create a new app from scratch and add components to it
 
+
+# Version : 0.7.0
+
+This project was created in order to generate the different classes used by my other library (https://github.com/joxad/easydatabinding)  using yeoman generator :
+
+
+In order to make databinding working, we need to create
+- a xml layout with <layout> <data></data> ... </layout>
+- a activity/fragment class
+- a vm associated to this activity/fragment
+
+The generator is here to help developers do it faster :)
+
+
+
 ## Installation
 
 First, install [Yeoman](http://yeoman.io) and generator-android-template using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
@@ -12,10 +27,14 @@ npm install -g generator-android-template
 
 Then generate your new project:
 
-```bash
-yo android-template
-```
+You will have to call the command line below IN THE ROOT of your project.
 
+## How does it work
+
+You will be ask a few questions in order to generate the needed classes :
+- applicationId => in order to know where to place the generated code
+- packageName => the package where you want to put the activty/fragment java classes
+- layout name => it will generate the xml & activity/fragment & activityVM/fragmentVM  
 
 ## Generate an activity
 
