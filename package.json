@@ -1,6 +1,6 @@
 {
   "name": "generator-android-template",
-  "version": "0.8.0",
+  "version": "0.8.2",
   "description": "Add android components in databinding way into your project",
   "homepage": "https://github.com/joxad/generator-android-template",
   "author": {

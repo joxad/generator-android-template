@@ -21,7 +21,7 @@ public class <%= name %> extends FragmentBase<<%= name %>Binding, <%= name %>VM>
 
     @Override
     public int data() {
-        return BR.<%= BR %>;
+        return BR.<%= BR %>VM;
     }
 
     @Override
@@ -30,7 +30,7 @@ public class <%= name %> extends FragmentBase<<%= name %>Binding, <%= name %>VM>
     }
 
     @Override
-    public <%= name %>VM baseFragmentVM(<%= name %>Binding binding, Bundle savedInstanceState) {
+    public <%= name %>VM baseFragmentVM(<%= name %>Binding binding) {
         return new <%= name %>VM(this, binding);
     }
 }
