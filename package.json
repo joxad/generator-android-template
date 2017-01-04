@@ -13,12 +13,18 @@
   ],
   "main": "generators/index.js",
   "keywords": [
-    "template",
-    "yeoman-generator"
+    "yeoman-generator",
+    "android",
+    "mvvm",
+    "databinding",
+    "generator",
+    "generator-android-template",
+    "boilerplate"
   ],
   "dependencies": {
-    "yeoman-generator": "^0.23.0",
     "chalk": "^1.0.0",
+    "xmldom": "^0.1.27",
+    "yeoman-generator": "^0.23.0",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
@@ -42,15 +48,6 @@
       "mocha": true
     }
   },
-  "keywords": [
-    "yeoman-generator",
-    "android",
-    "mvvm",
-    "databinding",
-    "generator",
-    "generator-android-template",
-    "boilerplate"
-  ],
   "repository": "joxad/generator-android-template",
   "scripts": {
     "prepublish": "gulp prepublish",

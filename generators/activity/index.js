@@ -2,6 +2,8 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var DOMParser = require('xmldom').DOMParser;
+var XMLSerializer = require('xmldom').XMLSerializer;
 
 module.exports = yeoman.Base.extend({
   initializing: function() {
@@ -17,7 +19,7 @@ module.exports = yeoman.Base.extend({
       message: 'What is the applicationId of your app?',
       store: true,
       default: this.applicationId
-    },{
+    }, {
       name: 'packageName',
       message: 'In which package do you want to put this activity?',
       store: true,
@@ -53,33 +55,52 @@ module.exports = yeoman.Base.extend({
       xmlSplit[i] = xmlSplit[i].charAt(0).toUpperCase() + xmlSplit[i].substring(1);
     }
     var name = xmlSplit.join('');
-    var activityBR = name.charAt(0).toLowerCase()+ name.substring(1);
+    var BR = name.charAt(0).toLowerCase() + name.substring(1);
     this.fs.copyTpl(
       this.templatePath('TemplateActivity.java'),
-      this.destinationPath('app/src/main/java/'+fullPackageFolder + "/" + packageNameFolder + '/' + name+'.java'), {
+      this.destinationPath('app/src/main/java/' + fullPackageFolder + "/" + packageNameFolder + '/' + name + '.java'), {
         appPackage: fullPackage,
-        packageName : packageName,
+        packageName: packageName,
         name: name,
-        layoutName : layoutXml,
-        BR : BR
+        layoutName: layoutXml,
+        BR: BR
       }
     );
 
     this.fs.copyTpl(
       this.templatePath('TemplateActivityVM.java'),
-      this.destinationPath('app/src/main/java/'+fullPackageFolder + "/" + packageNameFolder + '/' + name+'VM.java'), {
+      this.destinationPath('app/src/main/java/' + fullPackageFolder + "/" + packageNameFolder + '/' + name + 'VM.java'), {
         appPackage: fullPackage,
-        packageName : packageName,
+        packageName: packageName,
         name: name
       }
     );
     this.fs.copyTpl(
       this.templatePath('template_activity.xml'),
-      this.destinationPath('app/src/main/res/layout/'+layoutXml + '.xml'), {
+      this.destinationPath('app/src/main/res/layout/' + layoutXml + '.xml'), {
         appPackage: fullPackage,
-        packageName : packageName,
+        packageName: packageName,
         name: name,
-        BR : BR
+        BR: BR
+      }
+    );
+    this.fs.copy(
+      this.destinationPath("app/src/main/AndroidManifest.xml"),
+      this.destinationPath("app/src/main/AndroidManifest.xml"), {
+        process: function(contents) {
+          //TODO parse xml and add activity into it
+
+          var parser = new DOMParser();
+          console.log("CONTENTS"+contents);
+          var xmlDoc = parser.parseFromString(contents.toString(), "text/xml");
+
+          var application = xmlDoc.getElementsByTagName("application")[0];
+          var newActivity = xmlDoc.createElement('activity android:name=".'+ packageName +'.'+ name +'"');
+          application.appendChild(newActivity);
+          var oSerializer = new XMLSerializer();
+          var sPrettyXML = oSerializer.serializeToString(xmlDoc);
+          return sPrettyXML;
+        }
       }
     );
   }
