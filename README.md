@@ -43,6 +43,14 @@ You will be ask a few questions in order to generate the needed classes :
 yo android-template:activity
 ```
 
+
+## Generate an activity with recycler
+
+
+```bash
+yo android-template:activity-recycler
+```
+
 ## Generate a fragment
 
 
