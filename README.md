@@ -65,6 +65,13 @@ yo android-template:fragment
 yo android-template:fragment-support
 ```
 
+## Generate an item
+
+
+```bash
+yo android-template:item
+```
+
 
 ## Getting To Know Yeoman
 
