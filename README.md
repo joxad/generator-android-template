@@ -2,7 +2,7 @@
 > Create a new app from scratch and add components to it
 
 
-# Version : 0.9.0
+# Version : 0.9.5
 
 This project was created in order to generate the different classes used by my other library (https://github.com/joxad/easydatabinding)  using yeoman generator :
 
@@ -63,6 +63,14 @@ yo android-template:fragment
 
 ```bash
 yo android-template:fragment-support
+```
+
+
+## Generate a bottomsheet dialog fragment
+
+
+```bash
+yo android-template:bottom-fragment
 ```
 
 ## Generate an item
