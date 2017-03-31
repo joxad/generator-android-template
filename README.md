@@ -194,8 +194,7 @@ This will generate :
 - BaseVM of your model
 - Item layout associated with your vm
 
-
- ## Thanks
+## Thanks
 
  Very useful lib used :
 
@@ -204,8 +203,7 @@ This will generate :
  It handles the databinding inside the recyclerview => No adapter to write :)
 
 
-
- ## Getting To Know Yeoman
+## Getting To Know Yeoman
 
   * Yeoman has a heart of gold.
   * Yeoman is a person with feelings and opinions, but is very easy to work with.
