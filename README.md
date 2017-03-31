@@ -1,4 +1,4 @@
-# generator-android-template [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+# generator-android-template [![NPM version][npm-image]][npm-url]
 > Create a new app from scratch and add components to it
 
 # Version : 1.0.0
@@ -220,9 +220,3 @@ MIT © [Jocelyn David](https://github.com/joxad/)
 
 [npm-image]: https://badge.fury.io/js/generator-android-template.svg
 [npm-url]: https://npmjs.org/package/generator-android-template
-[travis-image]: https://travis-ci.org/joxad/generator-android-template.svg?branch=master
-[travis-url]: https://travis-ci.org/joxad/generator-android-template
-[daviddm-image]: https://david-dm.org/joxad/generator-android-template.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/joxad/generator-android-template
-[coveralls-image]: https://coveralls.io/repos/joxad/generator-android-template/badge.svg
-[coveralls-url]: https://coveralls.io/r/joxad/generator-android-template
