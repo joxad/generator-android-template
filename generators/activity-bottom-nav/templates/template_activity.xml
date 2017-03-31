@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="<%= BR %>VM"
+            type="<%= appPackage %>.<%= packageName %>.<%= name %>VM" />
+    </data>
+
+      <android.support.design.widget.CoordinatorLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:fitsSystemWindows="true">
+
+          <com.joxad.androidtemplate.core.view.list.NoSwipeViewPager
+               android:id="@+id/view_pager"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent" />
+
+           <android.support.design.widget.BottomNavigationView
+               android:id="@+id/bottom_navigation"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               app:itemBackground="@android:color/white"
+               app:itemIconTint="@color/<%= menuXml %>_selector"
+               app:itemTextColor="@color/<%= menuXml %>_selector"
+               app:layout_behavior="@string/bottom_sheet_behavior"
+               app:menu="@menu/<%= menuXml %>" />
+       </android.support.design.widget.CoordinatorLayout>
+
+
+
+
+</layout>

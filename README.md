@@ -1,8 +1,7 @@
 # generator-android-template [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 > Create a new app from scratch and add components to it
 
-
-# Version : 0.9.5
+# Version : 1.0.0
 
 This project was created in order to generate the different classes used by my other library (https://github.com/joxad/easydatabinding)  using yeoman generator :
 
@@ -15,10 +14,9 @@ In order to make databinding working, we need to create
 The generator is here to help developers do it faster :)
 
 
-
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-android-template using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+1. First, install [Yeoman](http://yeoman.io) and generator-android-template using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
@@ -29,27 +27,100 @@ Then generate your new project:
 
 You will have to call the command line below IN THE ROOT of your project.
 
+2. In your android project
+
+
+project build.gradle :
+
+```
+repositories {
+       maven { url "http://dl.bintray.com/joxad/maven" }    
+   }
+```
+
+app build.gradle :
+
+```
+compile com.joxad.easydatabinding:lib:1.0.0
+```
+
+
 ## How does it work
 
 You will be ask a few questions in order to generate the needed classes :
 - applicationId => in order to know where to place the generated code
-- packageName => the package where you want to put the activty/fragment java classes
+- packageName => the package where you want to put the activity/fragment java classes
 - layout name => it will generate the xml & activity/fragment & activityVM/fragmentVM  
 
 ## Generate an activity
-
 
 ```bash
 yo android-template:activity
 ```
 
+This will generate :
 
-## Generate an activity with recycler
+- Activity
+- Activity layout
+- Activity VM that will have your binding activity
+
+
+## Generate an activity with recycler (v1)
 
 
 ```bash
 yo android-template:activity-recycler
 ```
+
+This will generate an activity with a recycler view using https://github.com/evant/binding-collection-adapter v1
+
+- Activity
+- Activity layout
+- Activity VM that will have your binding activity
+- BaseVM that will handle each item model of your recycler
+- Item Layout for your recycler
+
+In your build.gradle add :
+```
+compile 'me.tatarka.bindingcollectionadapter:bindingcollectionadapter:1.0.3'
+compile 'me.tatarka.bindingcollectionadapter:bindingcollectionadapter-recyclerview:1.0.3'
+```
+
+## Generate an activity with recycler view (v2)
+
+
+```bash
+yo android-template:activity-recycler-v2
+```
+This will generate an activity with a recycler view using https://github.com/evant/binding-collection-adapter v2
+
+- Activity
+- Activity layout
+- Activity VM that will have your binding activity
+- BaseVM that will handle each item model of your recycler
+- Item Layout for your recycler
+
+In your build.gradle add :
+```
+compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.0.1'
+compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.0.1'
+```
+
+## Generate an activity with bottom bar navigation
+
+
+```bash
+yo android-template:activity-bottom-nav
+```
+
+This will generate an activity with a coordinator layout and a bottom view navigation
+
+- Activity
+- Activity layout
+- Activity VM that will have your binding activity
+- Menu xml in the resources
+- Menu color selector
+
 
 ## Generate a fragment
 
@@ -57,6 +128,12 @@ yo android-template:activity-recycler
 ```bash
 yo android-template:fragment
 ```
+
+This will generate :
+
+- Fragment
+- Fragment layout
+- Fragment VM that will have your binding fragment
 
 ## Generate a support fragment
 
@@ -66,6 +143,13 @@ yo android-template:fragment-support
 ```
 
 
+This will generate :
+
+- Fragment v4
+- Fragment layout
+- Fragment VM that will have your binding fragment
+
+
 ## Generate a bottomsheet dialog fragment
 
 
@@ -73,12 +157,24 @@ yo android-template:fragment-support
 yo android-template:bottom-fragment
 ```
 
-## Generate an item
 
+This will generate :
+
+- Bottom Sheet Dialog Fragment
+- Fragment layout
+- Bottom Sheet Dialog Fragment VM that will have your binding fragment
+
+
+## Generate an item
 
 ```bash
 yo android-template:item
 ```
+
+This will generate :
+
+- BaseVM of your model
+- Item layout associated with your vm
 
 
 ## Getting To Know Yeoman

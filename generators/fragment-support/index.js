@@ -24,7 +24,7 @@ module.exports = yeoman.Base.extend({
       default: this.packageName
     }, {
       name: 'layoutXml',
-      message: 'What are you calling your activity xml (example : fragment_home)? DONT WRITE .xml',
+      message: 'What are you calling your fragment xml (example : fragment_home)? DONT WRITE .xml',
       store: true,
       default: this.layoutXml,
       validate: function(input) {
