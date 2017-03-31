@@ -41,7 +41,7 @@ repositories {
 app build.gradle :
 
 ```
-compile com.joxad.easydatabinding:lib:1.0.0
+compile com.joxad.easydatabinding:lib:1.0.1
 ```
 
 
@@ -99,12 +99,6 @@ This will generate an activity with a recycler view using https://github.com/eva
 - Activity VM that will have your binding activity
 - BaseVM that will handle each item model of your recycler
 - Item Layout for your recycler
-
-In your build.gradle add :
-```
-compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.0.1'
-compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.0.1'
-```
 
 ## Generate an activity with bottom bar navigation
 
@@ -164,11 +158,6 @@ This will generate an fragment with a recycler view using https://github.com/eva
 - BaseVM that will handle each item model of your recycler
 - Item Layout for your recycler
 
-In your build.gradle add :
-```
-compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.0.1'
-compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.0.1'
-```
 
 ## Generate a bottomsheet dialog fragment
 
