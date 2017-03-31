@@ -150,13 +150,31 @@ This will generate :
 - Fragment VM that will have your binding fragment
 
 
-## Generate a bottomsheet dialog fragment
+## Generate a support fragment with recycler view (v2)
 
+
+```bash
+yo android-template:fragment-support-recycler-v2
+```
+This will generate an fragment with a recycler view using https://github.com/evant/binding-collection-adapter v2
+
+- Fragment
+- Fragment layout
+- Fragment VM that will have your binding fragment
+- BaseVM that will handle each item model of your recycler
+- Item Layout for your recycler
+
+In your build.gradle add :
+```
+compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:2.0.1'
+compile 'me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:2.0.1'
+```
+
+## Generate a bottomsheet dialog fragment
 
 ```bash
 yo android-template:bottom-fragment
 ```
-
 
 This will generate :
 
@@ -177,12 +195,23 @@ This will generate :
 - Item layout associated with your vm
 
 
-## Getting To Know Yeoman
+ ## Thanks
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+ Very useful lib used :
+
+ https://github.com/evant/binding-collection-adapter/
+
+ It handles the databinding inside the recyclerview => No adapter to write :)
+
+
+
+ ## Getting To Know Yeoman
+
+  * Yeoman has a heart of gold.
+  * Yeoman is a person with feelings and opinions, but is very easy to work with.
+  * Yeoman can be too opinionated at times but is easily convinced not to be.
+  * Feel free to [learn more about Yeoman](http://yeoman.io/).
+
 
 ## License
 
