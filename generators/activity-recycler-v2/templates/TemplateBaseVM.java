@@ -7,6 +7,7 @@ import com.joxad.easydatabinding.base.BaseVM;
  * <!!!!!> You have to replace the Object to your POJO class that will be handled in the VM <!!!!!>
  */
 public class <%= itemVM %> extends BaseVM<Object>{
+    private static final String TAG = <%= itemVM %>.class.getSimpleName();
 
     /***
       * @param context

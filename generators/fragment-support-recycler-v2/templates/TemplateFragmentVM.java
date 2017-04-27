@@ -12,6 +12,8 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding;
  */
 public class <%= name %>VM extends FragmentBaseVM<<%= name %>, <%= name %>Binding> {
 
+   private static final String TAG = <%= name %>VM.class.getSimpleName();
+
    public ObservableArrayList<<%= itemVM %>> items;
    public ItemBinding<<%= itemVM %>> itemView = ItemBinding.of(BR.<%= itemBR %>, R.layout.<%= itemLayoutXml %>);
 

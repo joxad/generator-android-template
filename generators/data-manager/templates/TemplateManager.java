@@ -8,10 +8,10 @@ import <%= appPackage %>.<%= packageName %>.endpoint.ScheduleEndpoint;
  *
  * You can create custom init using a custom gson converter and adding an interceptor
  */
-public enum <%= dataName %>Manager {
+public enum <%= dataClass %>Manager {
     INSTANCE;
 
-    <%= dataName %>Endpoint endpoint;
+    <%= dataClass %>Endpoint endpoint;
 
     public void init(final String url) {
        this.init(url, null, null);
@@ -26,7 +26,7 @@ public enum <%= dataName %>Manager {
    }
 
    public void init(final String url, @Nullable Interceptor interceptor, @Nullable Gson gson) {
-       endpoint = new RetrofitBase(url, interceptor, gson).create(<%= dataName %>Endpoint.class);
+       endpoint = new RetrofitBase(url, interceptor, gson).create(<%= dataClass %>Endpoint.class);
    }
 
 

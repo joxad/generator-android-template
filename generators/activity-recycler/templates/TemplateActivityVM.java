@@ -12,6 +12,8 @@ import me.tatarka.bindingcollectionadapter.ItemView;
  */
 public class <%= name %>VM extends ActivityBaseVM<<%= name %>, <%= name %>Binding> {
 
+  private static final String TAG = <%= name %>VM.class.getSimpleName();
+
    public ObservableArrayList<<%= itemVM %>> items;
    public ItemView itemView = ItemView.of(BR.<%= itemBR %>, R.layout.<%= itemLayoutXml %>);
 
@@ -34,7 +36,7 @@ public class <%= name %>VM extends ActivityBaseVM<<%= name %>, <%= name %>Bindin
     * Load the data from WS or DB to show them in the recycler
    ***/
    public void loadData() {
-      
+
    }
    /***
     * Add one mode o

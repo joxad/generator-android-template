@@ -18,6 +18,9 @@ import java.util.ArrayList;
  * You can generate your fragment using : yo android-template:fragment/yo android-template:fragment-support
  */
 public class <%= name %>VM extends ActivityBaseVM<<%= name %>, <%= name %>Binding> {
+
+  private static final String TAG = <%= name %>VM.class.getSimpleName();
+
   /***
     * @param activity
     * @param binding

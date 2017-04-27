@@ -19,14 +19,14 @@ module.exports = yeoman.Base.extend({
       default: this.applicationId
     },{
       name: 'packageName',
-      message: 'In which package do you want to put this fragment?',
+      message: 'In which package do you want to put the manager and all the data?',
       store: true,
       default: this.packageName
     }, {
       name: 'dataClass',
       message: 'What is the pojo  you want to manage?',
       store: true,
-      default: this.layoutXml,
+      default: this.dataClass,
       validate: function(input) {
         if (/^([a-zA-Z0-9_]*)$/.test(input)) {
           return true;
@@ -35,7 +35,7 @@ module.exports = yeoman.Base.extend({
       }
     }];
     return this.prompt(prompts).then(props => {
-      this.props.layoutXml = props.layoutXml;
+      this.props.applicationId = props.applicationId;
       this.props.packageName = props.packageName;
       this.props.dataClass = props.dataClass;
     });

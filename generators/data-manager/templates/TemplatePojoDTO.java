@@ -8,6 +8,7 @@ import io.realm.RealmObject;
  * This is stored in the DB using Realm . You can access them using you <%= dataClass %>Manager
  */
 public class <%= dataClass %>DTO extends RealmObject {
+  public String id;
 
   public <%= dataClass %>() {
 
