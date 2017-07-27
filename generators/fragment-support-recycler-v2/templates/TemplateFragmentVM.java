@@ -5,6 +5,8 @@ import <%= appPackage %>.R;
 import <%= appPackage %>.BR;
 import <%= appPackage %>.databinding.<%= name %>Binding;
 import android.databinding.ObservableArrayList;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 
 import me.tatarka.bindingcollectionadapter2.ItemBinding;
 /**
@@ -21,12 +23,12 @@ public class <%= name %>VM extends FragmentBaseVM<<%= name %>, <%= name %>Bindin
     * @param activity
     * @param binding
     */
-   public <%= name %>VM(<%= name %> activity, <%= name %>Binding binding) {
-       super(activity, binding);
+   public <%= name %>VM(<%= name %> activity, <%= name %>Binding binding,@Nullable Bundle savedInstance) {
+       super(activity, binding, savedInstance);
    }
 
    @Override
-   public void onCreate() {
+   public void onCreate(@Nullable Bundle savedInstance) {
      items = new ObservableArrayList<>();
      loadData();
    }
