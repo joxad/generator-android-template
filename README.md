@@ -41,7 +41,7 @@ repositories {
 app build.gradle :
 
 ```
-compile com.joxad.easydatabinding:lib:1.0.1
+compile com.joxad.easydatabinding:lib:1.1.0
 ```
 
 
