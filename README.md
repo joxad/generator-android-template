@@ -1,7 +1,7 @@
 # generator-android-template [![NPM version][npm-image]][npm-url]
 > Create a new app from scratch and add components to it
 
-# Version : 1.0.0
+# Version : 1.0.1
 
 This project was created in order to generate the different classes used by my other library (https://github.com/joxad/easydatabinding)  using yeoman generator :
 

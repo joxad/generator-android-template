@@ -24,7 +24,7 @@ public class <%= name %> extends ActivityBase<<%= name %>Binding, <%= name %>VM>
 
     @Override
     public <%= name %>VM baseActivityVM(<%= name %>Binding binding, Bundle savedInstanceState) {
-        return new <%= name %>VM(this, binding);
+        return new <%= name %>VM(this, binding,savedInstance);
     }
 
     /***
